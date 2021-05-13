@@ -1,0 +1,42 @@
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .viewport-header {
+    position: relative;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  main {
+    width: 80vw;
+    left: 10%;
+    height: 40vh;
+    overflow: auto;
+    background: rgba(black, 0.66);
+    color: white;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .logo {
+    max-width: 70px;
+  }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stiles.css">
+    <title>NeoServices | Login</title>
+
+    <script>
+        var device = navigator.userAgent;
+        if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/HTC/i)) {
+            if(confirm("Desea ir a la version movil del sistema?"))
+            location = "https://rastreo.subdominio.com/v3/m/index.php?token=XXXXXX";
+        }
+    </script>
+</head>
+<body>
+    <video src="img/trafic.mp4" autoplay loop playsinline muted poster="img/truck.jpg"></video>
+    <div class="container">
+        <div class="row">
+            <div class="col viewport-header">
+                <img class="logo" src="/img/logo.png" alt="logo"> <h2>Neoservices</h2>
+            </div>
+            
+            <div class="col viewport-header">
+                <div class="card">
+                    <div class="card-body">
+                        <form id='form_lr' method="POST" action="http://69.162.109.226/v3/mods/rlogin/login_procesar.php">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="user_lr" name="user_lr" placeholder="Usuario">
+                                <label for="floatingInput userlr">Usuario</label>
+                              </div>
+                              <div class="form-floating">
+                                <input type="password" class="form-control" id="password_lr" name="password_lr" placeholder="Password">
+                                <label for="floatingPassword password_lr">Password</label>
+                              </div>
+                                <input id="token_lr" name="token_lr" type="hidden" value="306d52c35cfcfef2d7099e64b1ebb3b8">
+                                <input id="server_lr" name="server_lr" type="hidden" value="69.162.109.226/v3/">
+                                <a href="#" class="red-text" onClick="enviar_clave();">Olvido su Clave?</a>
+                                <div><button class="btn btn-primary mb-3" type="submit">Ingresar </button></div>
+                                <div id="emsg_lr" class="red-text"></div>
+                        </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    
+      
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://fwpapis.com/cdn/rlogin/login_alerts.js"></script>
+    <script src="/js/scripts.js"></script>
+
+    <!-- script cambio de contraseña -->
+    <script type="text/javascript">
+        function enviar_clave(){
+          window.open ('http://69.162.109.226/sistema/enviar_clave.php','ventana_enviar_clave','width=640,height=480,top=150,left=150,toolbar=no,directories=no,menubar=no,status=yes,scrollbars=yes,resizable=no')
+        }
+      </script>
+
+</body>
+</html>
